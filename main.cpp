@@ -26,9 +26,12 @@ vector<int> findFactors(int number) {
 }
 int main() {
 
+    int number;
 
+    cout << "Enter a number: ";
+    cin >> number;
 
-    for (int n : findFactors(1000))
+    for (int n : findFactors(number))
     {
         cout << n << endl;
     }

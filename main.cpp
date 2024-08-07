@@ -3,36 +3,35 @@
 
 using namespace std;
 
+void findFactorsHelper(int number, int divisor, vector<int>& factors) {
+    if (divisor > number / 2) {
+        return;
+    }
 
-vector<int> findFactors(int number);
+    if (number % divisor == 0) {
+        factors.push_back(divisor);
+    }
 
+    findFactorsHelper(number, divisor + 1, factors);
+}
+
+vector<int> findFactors(int number) {
+    vector<int> factors = {1};
+
+    findFactorsHelper(number, 2, factors);
+
+    factors.push_back(number);
+
+    return factors;
+}
 int main() {
-    for (int n : findFactors(100))
+
+
+
+    for (int n : findFactors(1000))
     {
         cout << n << endl;
     }
     return 0;
 }
 
-vector<int> findFactors(int number)
-{
-
-    static vector<int> factors;
-
-    if (number == 0)
-    {
-        factors.push_back(0);
-        return factors;
-    }
-    for (int i = 1; i >= 0; i++)
-    {
-        if (number % i == 0)
-        {
-            factors.push_back(i);
-            factors.push_back(number / i);
-            findFactors(number / i);
-        }
-    }
-
-    return factors;
-}

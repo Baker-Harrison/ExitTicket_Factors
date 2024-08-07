@@ -1,0 +1,3 @@
+C:/Users/thehe/CLionProjects/CPP/ExitTicket-Factors/cmake-build-debug/CMakeFiles/ExitTicket_Factors.dir
+C:/Users/thehe/CLionProjects/CPP/ExitTicket-Factors/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/thehe/CLionProjects/CPP/ExitTicket-Factors/cmake-build-debug/CMakeFiles/rebuild_cache.dir
